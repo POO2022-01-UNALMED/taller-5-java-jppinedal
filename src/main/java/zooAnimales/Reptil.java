@@ -2,64 +2,59 @@ package zooAnimales;
 
 import java.util.ArrayList;
 
-public class Reptil extends Animal{
-	private static ArrayList<Reptil> listado = new ArrayList<>();
+public class Reptil extends Animal {
+	static private ArrayList<Reptil> listado = new ArrayList<>();
 	public static int iguanas;
 	public static int serpientes;
 	private String colorEscamas;
-	private  int largoCola;
-	
+	private int largoCola;
 	
 	
 	public Reptil() {
 		listado.add(this);
-	}
+		}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
-		super(nombre,edad,habitat,genero);
+		super(nombre, edad, habitat, genero);
 		this.colorEscamas = colorEscamas;
 		this.largoCola = largoCola;
 		listado.add(this);
-	}
-
-	public String getColorEscamas() {
-		return colorEscamas;
-	}
-
+		}
+	
 	public void setColorEscamas(String colorEscamas) {
 		this.colorEscamas = colorEscamas;
-	}
-
-	public int getLargoCola() {
-		return largoCola;
-	}
+		}
+	public String getColorEscamas() {
+		return colorEscamas;
+		}
 
 	public void setLargoCola(int largoCola) {
-		this.largoCola = largoCola;
-	}
-	
-	public static ArrayList<Reptil> getListado(){
-		return listado;
+		this.largoCola = largoCola;}
+	public int getLargoCola() {
+		return largoCola;
 		}
 	
 	public void setListado(ArrayList<Reptil> listado) {
 		this.listado = listado;
+		}
+	public static ArrayList<Reptil> getListado(){
+		return listado;
+		}
+	
+	public static int cantidadReptiles(){
+		return serpientes + iguanas;
 		}
 	
 	public String movimiento() {
 		return "reptar";
 	}
 	
-	public static int cantidadReptiles(){
-		return serpientes + iguanas;
-		}
-	
 	public static Reptil crearIguana(String nombre, int edad, String genero) {
 		Reptil iguana = new Reptil();
 		iguana.setEdad(edad);
 		iguana.setGenero(genero);
 		iguana.setNombre(nombre);
-		iguana.colorEscamas ="blanco"; 
+		iguana.colorEscamas ="blanco";
 		iguana.largoCola = 1 ;
 		iguana.setHabitat("jungla");
 		iguanas++;
@@ -79,6 +74,4 @@ public class Reptil extends Animal{
 		listado.add(serpiente);
 		return serpiente;
 		}
-	
-
 }
