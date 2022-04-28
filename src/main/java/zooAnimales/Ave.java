@@ -30,12 +30,6 @@ public class Ave extends Animal {
 	public String getColorPlumas() {
 		return colorPlumas;
 		}
-	public static int cantidadAves() {
-		return halcones+aguilas;}
-	
-	public String movimiento() {
-		return "volar";
-	}
 	
 	public static Ave crearHalcon(String nombre, int edad, String genero) {
 		Ave halcon = new Ave();
@@ -60,4 +54,11 @@ public class Ave extends Animal {
 		listado.add(aguila);
 		return aguila;
 		}
+	
+	public static int cantidadAves() {
+		return halcones+aguilas;}
+	
+	public String movimiento() {
+		return "volar";
+	}
 }

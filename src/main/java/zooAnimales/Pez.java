@@ -47,7 +47,7 @@ public class Pez extends Animal{
 		return cantidadAletas;
 		}
 	
-	public static int cantidadPeces() { //i4
+	public static int cantidadAves() { //i4
 		return salmones + bacalaos;
 		}
 	

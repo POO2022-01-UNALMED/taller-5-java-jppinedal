@@ -67,9 +67,6 @@ public class Animal {
 		return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero +
 				", la zona en la que me ubico es " + zona + ", en el " + zona.getZoo();
 	}
-	public String movimiento() {
-		return "desplazarse";
-		}
 	
 	public static String totalPorTipo() {
 		return "Mamiferos: " + (Mamifero.getListado().size()) + "\n"+
@@ -78,4 +75,9 @@ public class Animal {
 				"Peces: " + (Pez.getListado().size()) + "\n"+
 				"Anfibios: " + (Anfibio.getListado().size());	
 	}
+	
+	public String movimiento() {
+		return "desplazarse";
+		}
+	
 }
