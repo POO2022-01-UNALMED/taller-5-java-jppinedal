@@ -13,6 +13,10 @@ public class Pez extends Animal {
 	public Pez() {
 		this("", 0, "", "", "", 0);
 	}
+	
+	public int cantidadPeces() {
+		return Pez.listado.size();
+	}
 
 	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
 		this.setNombre(nombre);
@@ -24,8 +28,40 @@ public class Pez extends Animal {
 		Pez.listado.add(this);
 	}
 	
-	public int cantidadPeces() {
-		return Pez.listado.size();
+
+	public static ArrayList<Pez> getListado() {
+		return listado;
+	}
+	public static void setListado(ArrayList<Pez> listado) {
+		Pez.listado = listado;
+	}
+
+	public static int getSalmones() {
+		return salmones;
+	}
+	public static void setSalmones(int salmones) {
+		Pez.salmones = salmones;
+	}
+
+	public static int getBacalaos() {
+		return bacalaos;
+	}
+	public static void setBacalaos(int bacalaos) {
+		Pez.bacalaos = bacalaos;
+	}
+
+	public String getColorEscamas() {
+		return colorEscamas;
+	}
+	public void setColorEscamas(String colorEscamas) {
+		this.colorEscamas = colorEscamas;
+	}
+
+	public int getCantidadAletas() {
+		return cantidadAletas;
+	}
+	public void setCantidadAletas(int cantidadAletas) {
+		this.cantidadAletas = cantidadAletas;
 	}
 	
 	@Override 
@@ -43,46 +79,6 @@ public class Pez extends Animal {
 		Pez animal = new Pez(nombre, edad, "oceano", genero, "gris", 6);
 		Pez.bacalaos += 1;
 		return animal;
-	}
-
-	public static ArrayList<Pez> getListado() {
-		return listado;
-	}
-
-	public static void setListado(ArrayList<Pez> listado) {
-		Pez.listado = listado;
-	}
-
-	public static int getSalmones() {
-		return salmones;
-	}
-
-	public static void setSalmones(int salmones) {
-		Pez.salmones = salmones;
-	}
-
-	public static int getBacalaos() {
-		return bacalaos;
-	}
-
-	public static void setBacalaos(int bacalaos) {
-		Pez.bacalaos = bacalaos;
-	}
-
-	public String getColorEscamas() {
-		return colorEscamas;
-	}
-
-	public void setColorEscamas(String colorEscamas) {
-		this.colorEscamas = colorEscamas;
-	}
-
-	public int getCantidadAletas() {
-		return cantidadAletas;
-	}
-
-	public void setCantidadAletas(int cantidadAletas) {
-		this.cantidadAletas = cantidadAletas;
 	}
 	
 	

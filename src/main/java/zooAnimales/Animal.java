@@ -11,27 +11,6 @@ public class Animal {
 	private String genero;
 	private Zona zona;
 	
-	public static String totalPorTipo() {
-		return "Mamiferos: " + Mamifero.getListado().size() + "\n"
-			 + "Aves: " + Ave.getListado().size() + "\n"
-			 + "Reptiles: "+ Reptil.getListado().size() + "\n"
-			 + "Peces: "+ Pez.getListado().size() + "\n"
-			 + "Anfibios: " + Anfibio.getListado().size();
-	}
-
-	
-	@Override
-	public String toString() {
-		if(this.zona != null) {
-			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona.getNombre() + ", en el " + this.zona.getZoologico();			
-		} else {
-			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero;
-		}
-	}
-	
-	public String movimiento() {
-		return "desplazarse";
-	}
 	
 	public Animal() {
 		this("", 0, "", "");
@@ -44,7 +23,21 @@ public class Animal {
 		this.genero = genero;
 		Animal.totalAnimales += 1;
 	}
+	
+	
+	public static String totalPorTipo() {
+		return "Mamiferos: " + Mamifero.getListado().size() + "\n"
+			 + "Aves: " + Ave.getListado().size() + "\n"
+			 + "Reptiles: "+ Reptil.getListado().size() + "\n"
+			 + "Peces: "+ Pez.getListado().size() + "\n"
+			 + "Anfibios: " + Anfibio.getListado().size();
+	}
 
+	
+	public String movimiento() {
+		return "desplazarse";
+	}
+	
 	public static int getTotalAnimales() {
 		return totalAnimales;
 	}
@@ -93,6 +86,22 @@ public class Animal {
 		this.zona = zona;
 	}
 	
+	@Override
+	public String toString() {
+		if(this.zona != null) {
+			return "Mi nombre es " + this.nombre + 
+					", tengo una edad de " + this.edad 
+					+ ", habito en " + this.habitat + 
+					" y mi genero es " + this.genero + 
+					", la zona en la que me ubico es " + this.zona.getNombre() + 
+					", en el " + this.zona.getZoologico();			
+		} 
+		else {
+			return "Mi nombre es " + this.nombre + 
+					", tengo una edad de " + this.edad + 
+					", habito en " + this.habitat + 
+					" y mi genero es " + this.genero;
+		}
+	}
 
-	
 }

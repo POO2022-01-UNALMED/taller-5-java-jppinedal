@@ -9,6 +9,7 @@ public class Mamifero extends Animal {
 	private boolean pelaje;
 	private int patas;
 	
+	
 	public Mamifero() {
 		this("", 0, "", "", false, 0);
 	}
@@ -27,17 +28,7 @@ public class Mamifero extends Animal {
 		return Mamifero.listado.size();
 	}
 	
-	public static Mamifero crearCaballo(String nombre, int edad, String genero) {
-		Mamifero animal = new Mamifero(nombre, edad, "pradera", genero, true, 4);
-		Mamifero.caballos += 1;
-		return animal;
-	}
-
-	public static Mamifero crearLeon(String nombre, int edad, String genero) {
-		Mamifero animal = new Mamifero(nombre, edad, "selva", genero, true, 4);
-		Mamifero.leones += 1;
-		return animal;
-	}
+	
 
 	public static ArrayList<Mamifero> getListado() {
 		return listado;
@@ -62,6 +53,13 @@ public class Mamifero extends Animal {
 	public static void setLeones(int leones) {
 		Mamifero.leones = leones;
 	}
+	
+	public int getPatas() {
+		return patas;
+	}
+	public void setPatas(int patas) {
+		this.patas = patas;
+	}
 
 	public boolean isPelaje() {
 		return pelaje;
@@ -71,12 +69,17 @@ public class Mamifero extends Animal {
 		this.pelaje = pelaje;
 	}
 
-	public int getPatas() {
-		return patas;
+	
+	public static Mamifero crearCaballo(String nombre, int edad, String genero) {
+		Mamifero animal = new Mamifero(nombre, edad, "pradera", genero, true, 4);
+		Mamifero.caballos += 1;
+		return animal;
 	}
 
-	public void setPatas(int patas) {
-		this.patas = patas;
+	public static Mamifero crearLeon(String nombre, int edad, String genero) {
+		Mamifero animal = new Mamifero(nombre, edad, "selva", genero, true, 4);
+		Mamifero.leones += 1;
+		return animal;
 	}
 	
 	
